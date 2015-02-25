@@ -19,9 +19,6 @@ public class Startup {
 [ServiceContract]
 public interface ISoaService {
 	[OperationContract]
-	void ReloadNLogConfig();
-
-	[OperationContract]
 	bool IsAlive();
 
 	[OperationContract(Name = "IsServiceAlive")]
@@ -31,10 +28,9 @@ static class ServiceHelper {
 	public static bool IsAliveHttp(string endpointUrl) {
 		bool response = false;
 
-		ChannelFactory < ISoaService > channelFactory = null;
-
+		ChannelFactory <ISoaService> channelFactory = null;
 		try {
-			channelFactory = new ChannelFactory < ISoaService > (new BasicHttpBinding(BasicHttpSecurityMode.None), new EndpointAddress(endpointUrl));
+			channelFactory = new ChannelFactory <ISoaService> (new BasicHttpBinding(BasicHttpSecurityMode.None), new EndpointAddress(endpointUrl));
 
 			ISoaService soaService = channelFactory.CreateChannel();
 
@@ -54,10 +50,10 @@ static class ServiceHelper {
 	public static bool IsAliveTcp(string endpointUrl) {
 		bool response = false;
 
-		ChannelFactory < ISoaService > channelFactory = null;
+		ChannelFactory <ISoaService> channelFactory = null;
 
 		try {
-			channelFactory = new ChannelFactory < ISoaService > (new NetTcpBinding(SecurityMode.None), new EndpointAddress(endpointUrl));
+			channelFactory = new ChannelFactory <ISoaService> (new NetTcpBinding(SecurityMode.None), new EndpointAddress(endpointUrl));
 
 			ISoaService soaService = channelFactory.CreateChannel();
 
