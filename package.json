@@ -1,0 +1,10 @@
+{
+  "name": "edgejs-wcf-proxy",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "edge": "^0.9.3"
+  },
+  "devDependencies": {
+  }
+}
