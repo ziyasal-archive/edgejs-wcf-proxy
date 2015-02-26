@@ -1,7 +1,7 @@
 # edgejs-wcf-proxy
 A simple **nodejs** proxy script to call **Wcf** methods using **tcp** and basic **http** binding
 
-Works with nodejs  0.8.x or later (tested with v0.10.32 x64)
+Works with nodejs  0.8.x or later (tested with v0.10.33 x64)
 ##To Use on Linux##
 Install **mono**
 ```sh
